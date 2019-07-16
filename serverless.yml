@@ -1,0 +1,11 @@
+service: python_service
+
+provider: 
+  name: openwhisk
+  runtime: python
+
+functions: 
+  cron: 
+    handler: main.func
+    events: 
+      - schedule: (* * * * *)
