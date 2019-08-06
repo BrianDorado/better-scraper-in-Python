@@ -1,11 +1,12 @@
 service: python_service
 
 provider: 
-  name: openwhisk
+  name: aws
   runtime: python
 
 functions: 
-  cron: 
+  daily-scraper: 
     handler: main.func
     events: 
       - schedule: (* * * * *)
+    
